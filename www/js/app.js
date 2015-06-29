@@ -26,7 +26,8 @@ angular.module('starter', ['ionic', 'angular-table'])
 
   $http({
     // url: 'https://cdn.rawgit.com/tony1223/098e45623c73274f7ae3/raw/2038e428306da26e0e08459bec3142b10da4e56d/gistfile1.json',
-    url: 'http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=8ee36437-1255-47b3-bfda-5dffe71ffdc0',
+    // url: 'http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=8ee36437-1255-47b3-bfda-5dffe71ffdc0',
+    url: 'lib/apiAccess.json',
     method: 'get'
   }).success(function(data, status, headers, config) {
     $scope.data = data;
