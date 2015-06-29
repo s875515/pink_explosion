@@ -48,7 +48,6 @@ angular.module('starter', ['ionic', 'angular-table'])
         deleteindex: data.result.results[i].刪除註記
       });
     };
-    console.log($scope.list);
     $scope.originalList = $scope.list;
   });
 
