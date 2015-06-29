@@ -29,7 +29,8 @@
     <ion-pane>
     <!-- <a href="https://github.com/samu/angular-table"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000" src="https://github-camo.global.ssl.fastly.net/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a> -->
       <ion-header-bar class="bar-stable">
-        <h1 class="title">八仙樂園粉塵氣爆 上次更新時間：{{data.lastmodify}}</h1>
+        <!-- <h1 class="title">八仙樂園粉塵氣爆 上次更新時間：{{data.lastmodify}}</h1> -->
+        <h1 class="title">八仙樂園粉塵氣爆</h1>
       </ion-header-bar>
       <ion-content>
         <label class="item item-input">
@@ -40,7 +41,7 @@
           <thead></thead>
           <tbody>
             <tr>
-              <td at-implicit at-sortable at-attribute="id" at-title="編號"  at-initial-sorting="asc"></td>
+              <td at-implicit at-sortable at-attribute="id" at-title="編號"></td>
               <td at-implicit at-sortable at-attribute="counties" at-title="縣市別"></td>
               <td at-implicit at-sortable at-attribute="admitted" at-title="收治單位"></td>
               <td at-implicit at-sortable at-attribute="number" at-title="檢傷編號"></td>
@@ -57,7 +58,7 @@
           </tbody>
         </table>
         <at-pagination at-list="list" at-config="config" style="float: right; padding-right: 40px"></at-pagination>
-        資料來源： {{data.source}}
+        <!-- 資料來源： {{data.source}} -->
       </ion-content>
     </ion-pane>
   </body>
