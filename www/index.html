@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="http://samu.github.io/angular-table/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <script src="http://samu.github.io/angular-table/js/angular-table.min.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="basicExampleCtrl">
+
+    <ion-pane>
+    <!-- <a href="https://github.com/samu/angular-table"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000" src="https://github-camo.global.ssl.fastly.net/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a> -->
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">八仙樂園粉塵氣爆 上次更新時間：{{data.lastmodify}}</h1>
+      </ion-header-bar>
+      <ion-content>
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" class="form-control ng-valid ng-dirty" ng-model="query" ng-change="updateFilteredList(query)" placeholder="搜尋列(全部欄位皆可模糊搜尋)">
+        </label>
+        <table class="table table-striped" at-table at-paginated at-list="list" at-config="config">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td at-implicit at-sortable at-attribute="id" at-title="編號"  at-initial-sorting="asc"></td>
+              <td at-implicit at-sortable at-attribute="counties" at-title="縣市別"></td>
+              <td at-implicit at-sortable at-attribute="admitted" at-title="收治單位"></td>
+              <td at-implicit at-sortable at-attribute="number" at-title="檢傷編號"></td>
+              <td at-implicit at-sortable at-attribute="name" at-title="姓名"></td>
+              <td at-implicit at-sortable at-attribute="gender" at-title="性別"></td>
+              <td at-implicit at-sortable at-attribute="country" at-title="國籍"></td>
+              <td at-implicit at-sortable at-attribute="age" at-title="年齡"></td>
+              <td at-implicit at-sortable at-attribute="medicaltriage" at-title="醫療檢傷"></td>
+              <td at-implicit at-sortable at-attribute="ambulancetriage" at-title="救護檢傷"></td>
+              <td at-implicit at-sortable at-attribute="instanttrend" at-title="即時動向"></td>
+              <td at-implicit at-sortable at-attribute="referral" at-title="轉診要求"></td>
+              <td at-implicit at-sortable at-attribute="deleteindex" at-title="刪除註記"></td>
+            </tr>
+          </tbody>
+        </table>
+        <at-pagination at-list="list" at-config="config" style="float: right; padding-right: 40px"></at-pagination>
+        資料來源： {{data.source}}
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
